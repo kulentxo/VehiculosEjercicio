@@ -40,7 +40,7 @@ public class Bici extends Vehiculo implements ICoche {
 
 	@Override
 	public void arrancar() {
-		if (isArrancado() == false) {
+		if (!isArrancado()) {
 			setArrancado(true);
 			System.out.println("Bici arrancado");
 		} else {
@@ -51,7 +51,7 @@ public class Bici extends Vehiculo implements ICoche {
 
 	@Override
 	public void acelerar(int incrementoVel) {
-		if (getVelocidadActual() < VEL_MAX_BICI && isArrancado() == true) {
+		if (getVelocidadActual() < VEL_MAX_BICI && isArrancado()) {
 			if ((getVelocidadActual() + incrementoVel) > VEL_MAX_BICI) {
 				setVelocidadActual(VEL_MAX_BICI);
 				System.out.println("Velocidad maxima");
@@ -67,7 +67,7 @@ public class Bici extends Vehiculo implements ICoche {
 
 	@Override
 	public void frenar(int decrementoVel) {
-		if (isArrancado() == true) {
+		if (isArrancado()) {
 			if ((getVelocidadActual() - decrementoVel) == 0) {
 				setVelocidadActual(0);
 				System.out.println("Bici quieto");
