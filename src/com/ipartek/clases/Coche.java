@@ -30,9 +30,14 @@ public class Coche extends Vehiculo implements ICoche {
 
 	@Override
 	public void acelerar(int incrementoVel) {
-		if (getVelocidadActual() < VEL_MAX_PATINETE && isArrancado() == true) {
-			setVelocidadActual(getVelocidadActual() + incrementoVel);
-			System.out.println("Velocidad incrementado");
+		if (getVelocidadActual() < VEL_MAX_COCHE && isArrancado() == true) {
+			if ((getVelocidadActual() + incrementoVel) > VEL_MAX_COCHE) {
+				setVelocidadActual(VEL_MAX_COCHE);
+				System.out.println("Velocidad maxima");
+			} else {
+				setVelocidadActual(getVelocidadActual() + incrementoVel);
+				System.out.println("Velocidad incrementado");
+			}
 		} else {
 			System.out.println("Tienes que arrancar o sino has llegado al limite");
 		}
@@ -42,7 +47,7 @@ public class Coche extends Vehiculo implements ICoche {
 	@Override
 	public void frenar(int decrementoVel) {
 		if (isArrancado() == true) {
-			if ((getVelocidadActual() - decrementoVel) == 0) {
+			if ((getVelocidadActual() - decrementoVel) < 0) {
 				setVelocidadActual(0);
 				System.out.println("Coche quieto");
 			} else {

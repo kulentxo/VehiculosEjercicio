@@ -31,8 +31,13 @@ public class Patinete extends Vehiculo implements ICoche {
 	@Override
 	public void acelerar(int incrementoVel) {
 		if (getVelocidadActual() < VEL_MAX_PATINETE && isArrancado() == true) {
-			setVelocidadActual(getVelocidadActual() + incrementoVel);
-			System.out.println("Velocidad incrementado");
+			if ((getVelocidadActual() + incrementoVel) > VEL_MAX_PATINETE) {
+				setVelocidadActual(VEL_MAX_PATINETE);
+				System.out.println("Velocidad maxima");
+			} else {
+				setVelocidadActual(getVelocidadActual() + incrementoVel);
+				System.out.println("Velocidad incrementado");
+			}
 		} else {
 			System.out.println("Tienes que arrancar o sino has llegado al limite");
 		}
