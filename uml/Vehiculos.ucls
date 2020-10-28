@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="com.ipartek.clases.Vehiculo" project="VehiculosDeCiudad" 
     file="/VehiculosDeCiudad/src/com/ipartek/clases/Vehiculo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="802" y="615"/>    
+    <position height="-1" width="-1" x="793" y="519"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -47,23 +47,23 @@
     </display>  
   </interface>  
   <realization id="6">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <realization id="7">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="5"/>  
   </realization>  
-  <realization id="8">    
+  <realization id="7">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="8">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <realization id="9">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="5"/>  
   </realization>  
-  <generalization id="9">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
   <generalization id="10">    
-    <end type="SOURCE" refId="1"/>    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="4"/>  
   </generalization>  
   <generalization id="11">    

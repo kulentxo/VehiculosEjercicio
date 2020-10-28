@@ -1,5 +1,13 @@
 package com.ipartek.clases;
 
+/**
+ * realizar las modificaciones pertinentes en el programa para que los atributos
+ * arrancado y velocidadActual se hereden de una clase vehiculo, y que no se
+ * pueda heredar de las clases patinete bici y coche
+ * 
+ * @author Julen Martin
+ *
+ */
 public class Vehiculo {
 
 	private int velocidadActual;

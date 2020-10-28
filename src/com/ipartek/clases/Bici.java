@@ -2,6 +2,26 @@ package com.ipartek.clases;
 
 import com.ipartek.interfaces.ICoche;
 
+/**
+ * <ul>
+ * <li>Arrancar: pondrá el atributo estaArrancado a true. Debe estar apagado
+ * para poder arrancarse</li>
+ * <li>Acelerar: incrementara la velocidad actual con el valor que se le pasa
+ * por parámetro sin sobrepasar el limite máximo de velocidad. Solo acelerara si
+ * el patinete esta encendido</li>
+ * <li>Frenar: decrementara la velocidad actual con el valor que se le pasa por
+ * parámetro sin llegar a bajar de 0. Solo frenara si el patinete esta
+ * encendido</li>
+ * <li>Apagar: pondrá el atributo estaArrancado a false, solo si la
+ * velocidadActual es 0</li>
+ * <li>toString: mostrara una cadena de texto con el siguiente formato: “Soy un
+ * patinete, estoy (encendido/apagado) y mi velocidad es de (velocidadActual)
+ * Km/h”</li>
+ * </ul>
+ * 
+ * @author Julen Martin
+ *
+ */
 public class Bici extends Vehiculo implements ICoche {
 
 	public Bici() {
